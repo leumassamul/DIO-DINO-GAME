@@ -1,0 +1,42 @@
+.body{
+    background: gray;
+
+}
+.dino{
+    width: 60px;
+    height: 60px;
+    background-image:url(dino.png);
+    position: absolute;/* quando o position fica em absolute o elemento fica na posição determinada imdependetemente dos elementos emvolta */
+    bottom: 0;
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image:url(cactus.png);
+}
+.game-over{
+    text-align: center;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* criando uma animção em css */
+@keyframes slideright {          /* faz a movimentação do fundo */
+    from{
+        background-position: 70000%; /* from /// to escolhera de onde até onde o movimento se dará */
+    }
+    to {
+        background-position: 0;
+    }
+}
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(background.png);
+    background-repeat: repeat-x; /* fara com que a repetição do background seja infinita */
+    animation: slideright 600s infinite linear; /* a animação  vai correr de forma linear (mesma velocidade) infinitamente */
+    width: 100%;
+    height: 200px;
+}
